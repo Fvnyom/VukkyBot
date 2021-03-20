@@ -113,9 +113,28 @@ http.createServer((req, res) => {
 				body += chunk.toString(); // convert Buffer to string
 			});
 			req.on("end", () => {
-				let sid = decodeReq(body);
+				let sid = body.split("=")[1].split("&")[0]; //this could probably just be made to use the JSON i create soon but I don't care
 				if(sessions[sid].active) {
-					res.end();
+					let data = JSON.parse('{"' + decodeURI(body).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}' //eslint-disable-line 
+					); //I get errors if that comment is removed so i guess its important hahahaaha aim so funny pls help im dying inside if you see this dm me helpppppp
+					if(data.option != "misc.owner") {
+						if(!isNaN(parseInt(data.value))) {
+							api.set(data.option, parseInt(data.value));
+						} else {
+							if (typeof data.value == "string") {
+								if (data.value == "true" || data.value == "false") {
+									api.set(data.option, data.value == "true");
+								} else {
+									api.set(data.option, data.value.toString());
+								}
+							} else {
+								if (typeof data.value == "boolean") {
+									api.set(data.option, data.value == "true");
+								}
+							}
+						}
+					}
+					res.end("set");
 				} else {
 					res.end("403");
 				}
