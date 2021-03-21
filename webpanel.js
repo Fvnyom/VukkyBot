@@ -106,6 +106,21 @@ http.createServer((req, res) => {
 				res.end(JSON.stringify(sessions[sid]));
 			});
 		}
+		if(req.url == "/logout") {
+			let body = "";
+			req.on("data", chunk => {
+				body += chunk.toString(); // convert Buffer to string
+			});
+			req.on("end", () => {
+				let sid = decodeReq(body);
+				if (sessions[sid]) {
+					if (sessions[sid].active) {
+						sessions[sid].active = false;
+					}
+				}
+				res.end("Logged Out");
+			});
+		}
 		if(req.url == "/set") {
 			
 			let body = "";
@@ -114,6 +129,7 @@ http.createServer((req, res) => {
 			});
 			req.on("end", () => {
 				let sid = body.split("=")[1].split("&")[0]; //this could probably just be made to use the JSON i create soon but I don't care
+				if(!sessions[sid]) return res.end("403");
 				if(sessions[sid].active) {
 					let data = JSON.parse('{"' + decodeURI(body).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}' //eslint-disable-line 
 					); //I get errors if that comment is removed so i guess its important hahahaaha aim so funny pls help im dying inside if you see this dm me helpppppp
@@ -151,6 +167,7 @@ http.createServer((req, res) => {
 				let sid = decodeReq(body);
 				let requestedOption = body.split("=")[2];
 				api.get(requestedOption).then(data => {
+					if(!sessions[sid]) return res.end("403");
 					if(sessions[sid].active) {
 						if (requestedOption != "misc.owner") {
 							res.end(data.toString());

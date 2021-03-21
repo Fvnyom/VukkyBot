@@ -1,6 +1,7 @@
-const config = require("../config.json");
+let config = require("../config.json");
 require("dotenv").config();
 var mysql = require("mysql");
+const fs = require("fs");
 var sql;
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
 				console.log("[cfg] Error. remoteSettings enabled but mysql disabled! Shutting down!");
 				process.exit(69);
 			} else {
-				console.log("[cfg] ready");
+				console.log("[cfg] Ready");
 			}
 			
 		} else {
@@ -40,12 +41,26 @@ module.exports = {
 				console.log("[cfg] ready");
 			}
 		}
+		delete require.cache[require.resolve("../config.json")];
+		config = require("../config.json");
 	},
 	set: function(optionName, value) {
+		let config = require("../config.json");
+		console.log("I have been called");
 		if (!config.misc.remoteSettings) {
-			eval(config[optionName] = value);
-
+			let h = `config.${optionName}`;
+			
+			if (eval(h)) {
+				console.log("CHANGING: ", eval(h = value));
+				//eval(h = value);
+				config.misc.prefixReminder = false;
+				fs.writeFile("../config.json", JSON.stringify(config, null, 4), function writeJSON(err) {
+					console.log(JSON.stringify(config, null, 4));
+					if (err) return console.log(err);
+				});
+			}
 		} else {
+			console.log("mysql");
 			let con = mysql.createConnection({
 				host: process.env.SQL_HOST,
 				user: process.env.SQL_USER,
@@ -126,9 +141,11 @@ module.exports = {
 				}
 			});
 		}
-		
+		delete require.cache[require.resolve("../config.json")];
+		config = require("../config.json");
 	},
 	get: async function(optionName) {
+		let config = require("../config.json");
 		if (!config.misc.remoteSettings) {
 			return eval(`config.${optionName}`);
 		} else {
@@ -192,6 +209,8 @@ module.exports = {
 					}
 				});
 			}); // promise end
+			delete require.cache[require.resolve("../config.json")];
+			config = require("../config.json");
 			return await everythingIsFine;
 		}
 	}

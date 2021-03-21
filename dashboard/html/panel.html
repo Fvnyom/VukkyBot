@@ -14,7 +14,7 @@
 		</div>
 		<div class="inline float-right">
 			<button class="button button-blue text-2xl font-bold inline float-right px-10 m-10">Save Changes</button>
-			<button class="button button-blue text-2xl font-bold inline float-right px-10 m-10">Log out</button>
+			<button class="button button-blue text-2xl font-bold inline float-right px-10 m-10" onclick="logOut()">Log out</button>
 		</div>
 	</div>
 		<h1 id="loggedIn" class="text-3xl font-bold text-white">Loading...</h1>  
@@ -56,6 +56,7 @@
 		let data = { code:getCookie("sessionId"), option:updated, value:document.getElementById(updated).value}
 		$.post(url,data, (data, status) => {
 			console.log(data)
+			if (data == "403") window.location = window.location;
 		})
 		}
 		
@@ -64,6 +65,7 @@
 		let data = { code:getCookie("sessionId"), option:updated, value:document.getElementById(updated).checked}
 		$.post(url,data, (data, status) => {
 			console.log(data)
+			if (data == "403") window.location = window.location;
 		})
 		}
 
@@ -117,6 +119,14 @@
 						live()
 					});
 		})
+		function logOut() {
+			let url = "/logout"
+			let data = { code:getCookie("sessionId") }
+			$.post(url,data, (data, status) => {
+			console.log(data);
+			window.location = window.location;
+			});
+		}
 		let url2 = "/cfg"
 		let data2 = {code:"template"}
 		var cfgtemplate = {};
