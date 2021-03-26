@@ -9,6 +9,7 @@ require("dotenv").config();
 
 var sessions = {};
 
+console.log("Starting server...");
 http.createServer((req, res) => {
 	if(req.method != "POST") {
 		let responseCode = 404;
@@ -80,8 +81,16 @@ http.createServer((req, res) => {
 		
 				res.write(content);
 				res.end();
+			} else if (urlObj.pathname === "/loggedout") {
+				responseCode = 200;
+				content = fs.readFileSync("./dashboard/html/loggedout.html");
+				res.writeHead(responseCode, {
+					"content-type": "text/html;charset=utf-8",
+				});
+		
+				res.write(content);
+				res.end();
 			} else {
-
 				fs.readFile(`${__dirname }/dashboard/static/${req.url}`, function (err,data) {
 					if (err) {
 						res.writeHead(404);
@@ -122,7 +131,6 @@ http.createServer((req, res) => {
 			});
 		}
 		if(req.url == "/set") {
-			
 			let body = "";
 			req.on("data", chunk => {
 				body += chunk.toString(); // convert Buffer to string
@@ -156,9 +164,7 @@ http.createServer((req, res) => {
 				}
 			});
 		}
-		
 		if(req.url == "/get") {
-			
 			let body = "";
 			req.on("data", chunk => {
 				body += chunk.toString(); // convert Buffer to string

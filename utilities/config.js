@@ -3,20 +3,19 @@ require("dotenv").config();
 var mysql = require("mysql");
 const fs = require("fs");
 var sql;
+const vukkytils = require("./vukkytils");
 
 module.exports = {
 	init: function() {
 		if (!config.misc.mysql) {
 			if (config.misc.remoteSettings) {
-				console.log("[cfg] Error. remoteSettings enabled but mysql disabled! Shutting down!");
-				process.exit(69);
+				console.log("[cfg] remoteSettings is enabled but mysql is disabled! Exiting...");
+				process.exit(1);
 			} else {
-				console.log("[cfg] Ready");
+				console.log("[cfg] Ready!");
 			}
-			
 		} else {
 			if (config.misc.remoteSettings) {
-				
 				let con = mysql.createConnection({
 					host: process.env.SQL_HOST,
 					user: process.env.SQL_USER,
@@ -53,7 +52,7 @@ module.exports = {
 			if (eval(h)) {
 				console.log("CHANGING: ", eval(h = value));
 				//eval(h = value);
-				config.misc.prefixReminder = false;
+				config.counting.channelName = "fucking work pls";
 				fs.writeFile("../config.json", JSON.stringify(config, null, 4), function writeJSON(err) {
 					console.log(JSON.stringify(config, null, 4));
 					if (err) return console.log(err);

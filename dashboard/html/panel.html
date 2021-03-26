@@ -4,6 +4,7 @@
 		<title>VukkyBot Dashboard</title>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 		<link rel="stylesheet" href="tailwind.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<div class="table-row-group">
@@ -122,9 +123,9 @@
 		function logOut() {
 			let url = "/logout"
 			let data = { code:getCookie("sessionId") }
-			$.post(url,data, (data, status) => {
-			console.log(data);
-			window.location = window.location;
+			$.post(url, data, (data, status) => {
+				console.log(data);
+				window.location.href = window.location.href.split("/panel")[0] + "/loggedout"; //oh god yes
 			});
 		}
 		let url2 = "/cfg"
@@ -135,7 +136,7 @@
 			cfgtemplate = JSON.parse(data)
 		}).then(function() {
 			
-			for(key in cfgtemplate) {
+			for(key in cfgtemplate) { //I am really sorry for doing this but... My brain doesnt work enough for recursion, which would be better here to make it not be restricted
 				let keyx = cfgtemplate[key]
 				if (typeof keyx == "object") {
 					for (keyxy in keyx) {
@@ -156,19 +157,14 @@
 			console.log(allOptions)
 		})
 		function live() {
-			if(user.premium_type == 2) {
-				document.getElementById("username").innerHTML = `${user.username}#${user.discriminator}\n${user.id}<img id="nitroBadge" src="https://discord.com/assets/386884eecd36164487505ddfbac35a9d.svg" class="">`
+			if(user.premium_type == 2 || user.premium_type == 1) {
+				document.getElementById("username").innerHTML = `${user.username}#${user.discriminator}\n${user.id}<img id="nitroBadge" src="https://discord.com/assets/386884eecd36164487505ddfbac35a9d.svg" class="w-8 h-8">`
 			} else {
-				if(user.premium_type == 1) {
-					document.getElementById("username").innerHTML = `${user.username}#${user.discriminator}\n${user.id}\nNitro Classic`
-				} else {
-
-					document.getElementById("username").innerHTML = `${user.username}#${user.discriminator}\n${user.id}`
-				}
+				document.getElementById("username").innerHTML = `${user.username}#${user.discriminator}\n${user.id}`
 			}
 
 
-			document.getElementById("userid").innerHTML = `` //future proofing with the string and not just variable lol (lazy) 
+			document.getElementById("userid").innerHTML = `` //future proofing with the string and not just variable lol (lazy) (this is me like 4 months later wtf is this)
 			document.getElementById("loggedIn").innerHTML = `Hi, ${user.username}#${user.discriminator}!` 
 			document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=128`
 			for (let key in allOptions) {
