@@ -1,4 +1,4 @@
-let config = require("../config.json");
+//let config = require("../config.json");
 require("dotenv").config();
 var mysql = require("mysql");
 const fs = require("fs");
@@ -7,6 +7,7 @@ const vukkytils = require("./vukkytils");
 
 module.exports = {
 	init: function() {
+		let config = JSON.parse(fs.readFileSync("../config.json"));
 		if (!config.misc.mysql) {
 			if (config.misc.remoteSettings) {
 				console.log("[cfg] remoteSettings is enabled but mysql is disabled! Exiting...");
@@ -40,23 +41,21 @@ module.exports = {
 				console.log("[cfg] ready");
 			}
 		}
-		delete require.cache[require.resolve("../config.json")];
-		config = require("../config.json");
+		
 	},
 	set: function(optionName, value) {
-		let config = require("../config.json");
+		let config = JSON.parse(fs.readFileSync("../config.json"));
 		console.log("I have been called");
 		if (!config.misc.remoteSettings) {
 			let h = `config.${optionName}`;
 			
 			if (eval(h)) {
+				console.log(h);
 				console.log("CHANGING: ", eval(h = value));
 				//eval(h = value);
 				config.counting.channelName = "fucking work pls";
-				fs.writeFile("../config.json", JSON.stringify(config, null, 4), function writeJSON(err) {
-					console.log(JSON.stringify(config, null, 4));
-					if (err) return console.log(err);
-				});
+				console.log(config);
+				fs.writeFileSync("config.json", JSON.stringify(config));
 			}
 		} else {
 			console.log("mysql");
@@ -140,11 +139,11 @@ module.exports = {
 				}
 			});
 		}
-		delete require.cache[require.resolve("../config.json")];
-		config = require("../config.json");
 	},
 	get: async function(optionName) {
-		let config = require("../config.json");
+		let config = fs.readFileSync("../config.json");
+		console.log(config.toString());
+		//config = JSON.parse(config.toString());
 		if (!config.misc.remoteSettings) {
 			return eval(`config.${optionName}`);
 		} else {
@@ -208,8 +207,6 @@ module.exports = {
 					}
 				});
 			}); // promise end
-			delete require.cache[require.resolve("../config.json")];
-			config = require("../config.json");
 			return await everythingIsFine;
 		}
 	}
