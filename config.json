@@ -2,7 +2,7 @@
     "docs": "https://vukkyltd.github.io/VukkyBot/config.html",
     "$schema": "./config.schema.json",
     "misc": {
-        "invalidCmdReminder": true,
+        "invalidCmdReminder": false,
         "prefixReminder": false,
         "owner": [
             "708333380525228082",

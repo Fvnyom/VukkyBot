@@ -4,10 +4,11 @@ var mysql = require("mysql");
 const fs = require("fs");
 var sql;
 const vukkytils = require("./vukkytils");
-
+var config = require("../config.json");
 module.exports = {
 	init: function() {
-		let config = JSON.parse(fs.readFileSync("../config.json"));
+		delete require.cache[require.resolve("../config.json")];
+		config = require("../config.json");
 		if (!config.misc.mysql) {
 			if (config.misc.remoteSettings) {
 				console.log("[cfg] remoteSettings is enabled but mysql is disabled! Exiting...");
@@ -44,15 +45,15 @@ module.exports = {
 		
 	},
 	set: function(optionName, value) {
-		let config = JSON.parse(fs.readFileSync("../config.json"));
+		delete require.cache[require.resolve("../config.json")];
+		config = require("../config.json");
 		console.log("I have been called");
 		if (!config.misc.remoteSettings) {
 			let h = `config.${optionName}`;
 			
 			if (eval(h)) {
 				console.log(h);
-				console.log("CHANGING: ", eval(h = value));
-				//eval(h = value);
+				
 				config.counting.channelName = "fucking work pls";
 				console.log(config);
 				fs.writeFileSync("config.json", JSON.stringify(config));
@@ -141,7 +142,8 @@ module.exports = {
 		}
 	},
 	get: async function(optionName) {
-		let config = fs.readFileSync("../config.json");
+		delete require.cache[require.resolve("../config.json")];
+		config = require("../config.json");
 		console.log(config.toString());
 		//config = JSON.parse(config.toString());
 		if (!config.misc.remoteSettings) {
