@@ -47,13 +47,11 @@ module.exports = {
 	set: function(optionName, value) {
 		delete require.cache[require.resolve("../config.json")];
 		config = require("../config.json");
-		console.log("I have been called");
 		if (!config.misc.remoteSettings) {
 			let h = `config.${optionName}`;
 			
 			if (eval(h)) {
 				console.log(h);
-				
 				config.counting.channelName = "fucking work pls";
 				console.log(config);
 				fs.writeFileSync("config.json", JSON.stringify(config));
