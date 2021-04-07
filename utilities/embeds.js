@@ -243,8 +243,8 @@ function aboutEmbed(botversion, discordjsversion, osinfo) {
 		.setTitle(`${vukkytils.getString("ABOUT_VUKKYBOT_TITLE")}`)
 		.setDescription("[Did you know? Fvn is a dumbass!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
 		.addField(vukkytils.getString("ABOUT_VUKKYBOT_BOT_VER"), botversion, true)
-		.addField("h"), ("i am not okay please help")
-		.addField("nyom"), ("**d r i n k   m e**")
+		.addField("h","i am not okay please help")
+		.addField("nyom", "**d r i n k   m e**")
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
 }
