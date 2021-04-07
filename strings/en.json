@@ -1,6 +1,6 @@
 {
-	"ERROR_GENERIC": "i fucked up",
-	"ERROR_RELOAD": "i fucked up while reloading **%s**:\n`%s`",
+	"ERROR_GENERIC": "something fucked up",
+	"ERROR_RELOAD": "something fucked up while reloading **%s**:\n`%s`",
 	"COUNTING": "counting",
 	"STARTUP": "startup",
 	"STARTING": "VukkyBot is starting...",
