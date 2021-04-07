@@ -95,43 +95,22 @@ client.once("ready", async () => {
 	console.log(`\n[${vukkytils.getString("STARTUP")}] ${format(vukkytils.getString("READY"), pjson.version)}\n`);
 	if(!process.env.BOT_PREFIX && process.env.PREFIX) console.log(`[${vukkytils.getString("STARTUP")}] ${vukkytils.getString("ENV_PREFIX_RENAMED")}`);
 	const statuses = [
-		"with JavaScript",
-		"with a Vukky",
-		"with counting bots",
-		"with banning people",
-		"with the console",
-		"with npm",
-		"with ESLint",
-		"with MySQL",
-		"with SPAGHETTI",
-		"with the Vukkies",
-		"with node-fetch",
-		"with vukkyutils",
-		"with discord.js",
-		"Fall Guys",
-		"Among Us",
-		"Fortnite",
-		"Roblox",
-		"Minecraft",
-		"osu!",
-		"Pixel Strike 3D",
-		"Among Guys",
-		"DropBlox",
-		"Club Penguin",
-		"Baba is You",
-		"Vukkyland",
-		"Elemental on Discord",
-		"Genshin Impact",
-		"VALORANT",
-		"Terraria",
-		"The Game (i lost)",
-		"RuneLite",
-		"RuneScape",
-		"Old School Runescape",
-		"on Funorb",
-
+		"with",
+		"with my brother shitbot",
+		"AMOGUS (REAL!?!?!?!?)",
+		"around",
+		"with Fvn's feelings",
+		"ur mom [laugh track]",
+		"sdjfnsiurghierjgergberng THE GAME",
+		"AAAAAAAAAAAAAAAAAAAAA",
+		"*screaming*",
+		"i am not okay please help please please aaaAAAAA-",
+		"https://nyom.ga/",
+		"omori (basil supremacy)",
+		"nyom",
+		"*slurp*"
 	];
-	client.user.setActivity(`with the world (${pjson.version})`);
+	client.user.setActivity(`h (${pjson.version})`);
 	setInterval(() => {
 		const index = Math.floor(Math.random() * (statuses.length - 1) + 1);
 		client.user.setActivity(`${statuses[index]} (${pjson.version})`);
