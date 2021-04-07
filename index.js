@@ -114,7 +114,7 @@ client.once("ready", async () => {
 	setInterval(() => {
 		const index = Math.floor(Math.random() * (statuses.length - 1) + 1);
 		client.user.setActivity(`${statuses[index]} (${pjson.version})`);
-	}, 15000);
+	}, 6969);
 	counting.start(client);
 	if (config.updateChecker.enabled) {
 		setInterval(() => {
