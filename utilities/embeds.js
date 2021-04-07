@@ -245,7 +245,7 @@ function aboutEmbed(botversion, discordjsversion, osinfo) {
 		.addField(vukkytils.getString("ABOUT_VUKKYBOT_BOT_VER"), botversion, true)
 		.addField("h")
 		.addField("nyom")
-		.setTimestamp()
+		.setTimestamp("i cant read a clock")
 		.setFooter(versionString, avatarURL);
 }
 
