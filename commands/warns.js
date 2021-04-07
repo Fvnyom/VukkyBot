@@ -8,7 +8,7 @@ const vukkytils = require("../utilities/vukkytils");
 
 module.exports = {
 	name: "warns",
-	description: "View warnings created using VukkyBot",
+	description: "look at previous mistakes.",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	mysql: true,
 	guildOnly: true,

@@ -8,7 +8,7 @@ const format = require("util").format;
 
 module.exports = {
 	name: "wikipedia",
-	description: "Search Wikipedia using VukkyBot!",
+	description: "wikipedia more like wikipeeedia hahahahaha",
 	botPermissions: ["EMBED_LINKS"],
 	execute(message, args) {
 		message.channel.send(`${config.misc.emoji.loading} ${vukkytils.getString("GETTING_DATA")}`)

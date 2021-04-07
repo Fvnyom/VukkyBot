@@ -10,7 +10,7 @@ const format = require("util").format;
 
 module.exports = {
 	name: "delwarn",
-	description: "Make VukkyBot remove warnings from people!",
+	description: "tak away warning",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	userPermissions: ["MANAGE_MESSAGES"],
 	args: true,

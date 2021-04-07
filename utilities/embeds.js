@@ -241,7 +241,7 @@ function aboutEmbed(botversion, discordjsversion, osinfo) {
 	return new Discord.MessageEmbed()
 		.setColor("#4289c1")
 		.setTitle(`💁‍♂️ ${vukkytils.getString("ABOUT_VUKKYBOT_TITLE")}`)
-		.setDescription("Did you know? Fvn is a dumbass!(https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
+		.setDescription("[Did you know? Fvn is a dumbass!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
 		.addField(vukkytils.getString("ABOUT_VUKKYBOT_BOT_VER"), botversion, true)
 		.addField(vukkytils.getString("ABOUT_VUKKYBOT_DJS_VER"), discordjsversion, true)
 		.addField(vukkytils.getString("ABOUT_VUKKYBOT_OS_INFO"), osinfo, true)

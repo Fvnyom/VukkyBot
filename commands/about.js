@@ -6,7 +6,7 @@ var os = require("os");
 
 module.exports = {
 	name: "about",
-	description: "Get information about this VukkyBot!",
+	description: "learn about this puddle of piss",
 	botPermissions: ["EMBED_LINKS"],
 	aliases: ["info"],
 	execute(message, args) {

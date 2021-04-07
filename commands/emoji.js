@@ -3,12 +3,13 @@ const embeds = require("../utilities/embeds");
 
 module.exports = {
 	name: "emoji",
-	description: "Add and remove emojis with the help of VukkyBot!",
+	description: "haha cool smol picture thingys",
 	botPermissions: ["MANAGE_EMOJIS"],
 	userPermissions: ["MANAGE_EMOJIS"],
 	args: true,
 	guildOnly: true,
 	usage: "add <attach image to message> or emoji delete <image ID>",
+	aliases: ["emote"],
 	execute(message, args) {
 		if (args[0] == "add") {
 			if (message.attachments.size > 0) {

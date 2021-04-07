@@ -36,7 +36,7 @@ function everythingIsFine(message, mentionedUser, args) {
 
 module.exports = {
 	name: "warn",
-	description: "Make VukkyBot give people warnings!",
+	description: "oh no person do bad thing time to hurt their feelings",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	userPermissions: ["MANAGE_MESSAGES"],
 	usage: "<@user> <reason>",
