@@ -5,8 +5,7 @@
         "invalidCmdReminder": true,
         "prefixReminder": true,
         "owner": [
-            "708333380525228082",
-            "125644326037487616"
+            "468242178880176129"
         ],
         "mysql": true,
         "language": "en",
@@ -18,7 +17,9 @@
     "moderation": {
         "automod": {
             "allowInviteLinks": false,
-            "allowInviteLinksBypassRoles": ["770972367227846667"],
+            "allowInviteLinksBypassRoles": [
+                "770972367227846667"
+            ],
             "autoResponses": {
                 "enabled": true,
                 "responses": {
@@ -45,18 +46,18 @@
         }
     },
     "counting": {
-        "enabled": true,
+        "enabled": false,
         "channelName": "counting",
         "customEmoji": {
-            "69420": "👀",
-            "10000": "🤯",
-            "2763": "✏️",
-            "1000": "🏆",
-            "420": "👀",
-            "100": "💯",
-            "69": "👀",
+            "21": "🧠",
             "42": "🧑‍🚀",
-            "21": "🧠"
+            "69": "👀",
+            "100": "💯",
+            "420": "👀",
+            "1000": "🏆",
+            "2763": "✏️",
+            "10000": "🤯",
+            "69420": "👀"
         }
     },
     "updateChecker": {
@@ -64,9 +65,7 @@
         "dmOwner": true
     },
     "reports": {
-        "enabled": true,
-        "channelName": "reports",
-        "staffRoleName": "Staff"
+        "enabled": true
     },
     "commands": {
         "quiz": {
