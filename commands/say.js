@@ -1,5 +1,5 @@
 
-const embeds = require("../embeds.js");
+const embeds = require("../utilities/embeds");
 const config = require("../config.json");
 
 module.exports = {
@@ -13,10 +13,10 @@ module.exports = {
 				message.delete();
 				message.channel.send(say);
 			} else {
-				message.channel.send("Sorry, but you're not the owner of this VukkyBot.");
+				message.channel.send("you arent Fvn, don't even try nyom");
 			}
 		} else {
-			message.channel.send(embeds.errorEmbed("go the fuck away from me ville"));
+			message.channel.send(embeds.errorEmbed("go the fuck away from me ville :D"));
             
                 
             
