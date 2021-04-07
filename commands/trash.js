@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports = {
 	name: "trash",
-	description: "trash?",
+	description: "where i belong",
 	botPermissions: ["ATTACH_FILES"],
 	async execute(message, args) {
 		const trash = await canvacord.trash(message.author.avatarURL({ format: "png" }));

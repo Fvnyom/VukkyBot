@@ -4,10 +4,11 @@ const format = require("util").format;
 
 module.exports = {
 	name: "slap",
-	description: "Slap someone!",
+	description: "smacc",
 	botPermissions: ["EMBED_LINKS"],
 	args: true,
 	usage: "<@user to slap>",
+	aliases: ["smacc"],
 	execute(message, args) {
 		if(!message.mentions.users.size) {
 			message.channel.send(embeds.errorEmbed(vukkytils.getString("PING_REQUIRED")));

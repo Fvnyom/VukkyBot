@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports = {
 	name: "wanted",
-	description: "you are wanted! $5,000 reward!",
+	description: "you are wanted! $69,420 reward!",
 	botPermissions: ["ATTACH_FILES"],
 	async execute(message, args) {
 		const wanted = await canvacord.wanted(message.author.avatarURL({ format: "png" }));
