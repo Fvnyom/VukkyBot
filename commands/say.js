@@ -14,7 +14,7 @@ module.exports = {
 				message.channel.send(say);
 			} else {
 				message.delete();
-				message.channel.send("you arent Fvn, don't even try nyom");
+				message.channel.send(`<@!${message.author.id}> you arent Fvn, don't even try nyom`);
 			}
 		} else {
 			message.delete();
