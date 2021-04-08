@@ -6,7 +6,7 @@ const format = require("util").format;
 
 module.exports = {
 	name: "today-in-history",
-	description: "Find out what happened today in history!",
+	description: "find out what happened today in history",
 	botPermissions: ["EMBED_LINKS"],
 	cooldown: 60,
 	aliases: ["today", "history"],

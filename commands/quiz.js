@@ -5,7 +5,7 @@ const vukkytils = require("../utilities/vukkytils");
 
 module.exports = {
 	name: "quiz",
-	description: "Let's play a quiz!",
+	description: "aer you the big dumb or the big smart",
 	botPermissions: ["EMBED_LINKS", "ADD_REACTIONS"],
 	aliases: ["trivia"],
 	execute(message, args) {
