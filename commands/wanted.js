@@ -4,7 +4,7 @@ const config = require("../config.json");
 
 module.exports = {
 	name: "wanted",
-	descwantedtion: "you are wanted! $69,420 reward!",
+	description: "you are wanted! $69,420 reward!",
 	botPermissions: ["ATTACH_FILES"],
 	usage: "[user]",
 	async execute(message, args) {
