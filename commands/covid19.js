@@ -10,7 +10,7 @@ const format = require("util").format;
 
 module.exports = {
 	name: "covid19",
-	description: "Get COVID stats!",
+	description: "get stats on the dumb poopoo virus",
 	botPermissions: ["EMBED_LINKS"],
 	aliases: ["covid", "covid-19"],
 	execute(message, args) {
@@ -21,7 +21,7 @@ module.exports = {
 				fetch(diseaselink)
 					.then(res => {
 						if(!res.ok) {
-							newMessage.edit(`${config.misc.emoji.error} ${res.status} - Either ${country} isn't a country, there are no cases there, or something bad happened.`);
+							newMessage.edit(`${config.misc.emoji.error} ${res.status} - either ${country} isn't a country, there are no cases there, or something bad happened.`);
 						} else {
 							return res.json();
 						}

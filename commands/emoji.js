@@ -21,25 +21,25 @@ module.exports = {
 								.then(emoji => message.channel.send(successEmbed(`I've made a new emoji called ${emoji.name}!`)))
 								.catch(error => message.channel.send(errorEmbed(`${error.message}`)));
 						} else {
-							message.channel.send(errorEmbed("I found symbols that are not suitable for the name of the emoji!"));
+							message.channel.send(errorEmbed("there are things i cant put in the name of the emote"));
 						}
 					} else {
-						message.channel.send(errorEmbed("The name of the emoji must be longer than 2 letters!"));
+						message.channel.send(errorEmbed("make the name at least 2 letters nyom"));
 					}
 				} else {
-					message.channel.send(errorEmbed("You didn't give me enough arguments!\nUsage:`emoji add <emojiName>` with an image as attachment."));
+					message.channel.send(errorEmbed("you didnt give me enough arguments \nusage:`emoji add <emojiName>` with an image as attachment"));
 				}
 			} else {
-				message.channel.send(errorEmbed("You didn't give me enough arguments!\nUsage:`emoji add <emojiName>` with an image as attachment."));
+				message.channel.send(errorEmbed("you didnt give me enough arguments \nusage:`emoji add <emojiName>` with an image as attachment"));
 			}
 		} else {
 			if (args[0] == "delete" || args[0] == "remove") {
-				if(!message.guild.emojis.cache.get(args[1])) return message.channel.send(embeds.errorEmbed(`\`${args[1]}\` is not an emoji ID.`));
+				if(!message.guild.emojis.cache.get(args[1])) return message.channel.send(embeds.errorEmbed(`\`${args[1]}\` is not an emoji ID`));
 				let emoji = message.guild.emojis.cache.get(args[1]);
-				emoji.delete({ reason: `Done by ${message.author.tag}` });
-				message.channel.send(embeds.successEmbed(`I've deleted \`${emoji.name}\`!`));
+				emoji.delete({ reason: `done by ${message.author.tag}` });
+				message.channel.send(embeds.successEmbed(`ive deleted \`${emoji.name}\``));
 			} else {
-				return message.channel.send(embeds.errorEmbed(`${args[0]} is not supported for this command.`));
+				return message.channel.send(embeds.errorEmbed(`${args[0]} is not supported for this command`));
 			}
 		}
 		

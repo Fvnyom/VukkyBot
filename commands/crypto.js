@@ -7,7 +7,7 @@ const vukkytils = require("../utilities/vukkytils");
 
 module.exports = {
 	name: "crypto",
-	description: "Get crypto prices!",
+	description: "get cryptocurrency prices!",
 	botPermissions: ["EMBED_LINKS"],
 	cooldown: 15,
 	args: true,
@@ -17,13 +17,13 @@ module.exports = {
 		function checkStatus(res, newMessage) {
 			checkStatusVar = 1;
 			if(res.status == 400) {
-				return newMessage.edit(`${config.misc.emoji.error} Are you sure ${args[0].toUpperCase()} is a valid coin?`);
+				return newMessage.edit(`${config.misc.emoji.error} ya sure ${args[0].toUpperCase()} is an actual coin?`);
 			} else if (res.status == 502) {
-				return newMessage.edit(`${config.misc.emoji.error} The server appears to be unavailable. Come back later.`);
+				return newMessage.edit(`${config.misc.emoji.error} the server appears to be unavailable so like come back later maybe`);
 			} else if (res.status == 429) {
-				return newMessage.edit(`${config.misc.emoji.error} VukkyBot has been ratelimited from accessing the API.`);
+				return newMessage.edit(`${config.misc.emoji.error} pissbot has been ratelimited from accessing the API`);
 			} else {
-				return newMessage.edit(`${config.misc.emoji.error} Something is broken!`);
+				return newMessage.edit(`${config.misc.emoji.error} Something is fucked!`);
 			}
 		}
 		message.channel.send(`${config.misc.emoji.loading} ${vukkytils.getString("GETTING_DATA")}`)

@@ -21,7 +21,7 @@ module.exports = {
 	aliases: ["delwarning", "deletewarning", "deletewarn"],
 	execute(message, args) {
 		let warningId = args[0];
-		if (isNaN(warningId)) return message.channel.send(errorEmbed(`Please specify the **ID** of the warning you wish to remove.\n${warningId} is not a warning ID.`));
+		if (isNaN(warningId)) return message.channel.send(errorEmbed(`please say the **ID** of the warning you wish to remove.\n${warningId} is not a warning ID`));
 		var con = mysql.createConnection({
 			host: process.env.SQL_HOST,
 			user: process.env.SQL_USER,

@@ -5,7 +5,7 @@ const vukkytils = require("../utilities/vukkytils");
 
 module.exports = {
 	name: "fun-fact",
-	description: "I sure do love fun facts!",
+	description: "learn things™",
 	botPermissions: ["EMBED_LINKS"],
 	aliases: ["ff", "fun-fact", "did-you-know"],
 	execute(message, args) {

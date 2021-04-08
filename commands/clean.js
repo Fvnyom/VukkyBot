@@ -14,8 +14,8 @@ module.exports = {
 	usage: "<messages to clear>",
 	aliases: ["clear", "wipe", "clean"],
 	execute(message, args) {
-		if(parseInt(args[0]) < 1 || isNaN(parseInt(args[0]))) return message.channel.send(embeds.errorEmbed("You're so funny! But to eat messages, I need the amount of messages you want me to eat **in numbers** - and it should be greater than or equal to **1**."));
-		if(parseInt(args[0]) > 99) return message.channel.send(embeds.errorEmbed("Sorry, I can only eat 99 messages at a time."));
+		if(parseInt(args[0]) < 1 || isNaN(parseInt(args[0]))) return message.channel.send(embeds.errorEmbed("its either thats not a number or it **is** but it's less than 1."));
+		if(parseInt(args[0]) > 99) return message.channel.send(embeds.errorEmbed("i cant count that high aaaa"));
 
 		message.channel.bulkDelete(parseInt(args[0]) + 1, true).then(() => {
 			message.channel.send(format(vukkytils.getString("CLEANED_MESSAGES"), args[0])).then(msg => msg.delete({timeout: 2000}));

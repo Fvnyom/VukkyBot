@@ -7,7 +7,7 @@ var specialCodeContents;
 
 function confirmDroppy(message, args) {
 	const prize = args.slice(1).join(" ");
-	let stringy = `Do you want to make a giveaway drop with the prize ${prize}?`;
+	let stringy = `do you want to make a giveaway drop with the prize ${prize}?`;
 	if(specialCode == true) { stringy = `Do you want to make a giveaway drop with the prize ${prize}, containing a code (**${specialCodeContents}**)?`;}
 	message.channel.send(embeds.inputEmbed(stringy))
 		.then(checkmessage => {
@@ -24,12 +24,12 @@ function confirmDroppy(message, args) {
 					if (reaction.emoji.name === "👍") {
 						droppy(message, prize);
 					} else {
-						message.channel.send(embeds.successEmbed("Giveaway drop creation has been cancelled!"));
+						message.channel.send(embeds.successEmbed("giveaway drop creation has been cancelled"));
 					}
 				})
 				.catch(collected => {
-					console.log(`👨‍💻 Drop creation failed: ${collected.message}`);
-					return message.channel.send("you didn't answer in time, or there was an error.");
+					console.log(`👨‍💻 drop creation failed: ${collected.message}`);
+					return message.channel.send("you didn't answer in time, or there was an error");
 				});
 		});
 }
