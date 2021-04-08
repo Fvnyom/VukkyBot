@@ -10,6 +10,7 @@ module.exports = {
 	name: "wikipedia",
 	description: "wikipedia more like wikipeeedia hahahahaha",
 	botPermissions: ["EMBED_LINKS"],
+	aliases: ["wiki"],
 	execute(message, args) {
 		message.channel.send(`${config.misc.emoji.loading} ${vukkytils.getString("GETTING_DATA")}`)
 			.then(newMessage => {
