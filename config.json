@@ -18,7 +18,8 @@
         "automod": {
             "allowInviteLinks": false,
             "allowInviteLinksBypassRoles": [
-                "770972367227846667"
+                "770972367227846667",
+                "782810590979555339"
             ],
             "autoResponses": {
                 "enabled": true,
