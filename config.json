@@ -47,7 +47,7 @@
         }
     },
     "counting": {
-        "enabled": false,
+        "enabled": true,
         "channelName": "counting",
         "customEmoji": {
             "21": "🧠",
