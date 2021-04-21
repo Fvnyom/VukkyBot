@@ -8,7 +8,7 @@ module.exports = {
 	botPermissions: ["EMBED_LINKS"],
 	args: true,
 	usage: "<@user to headpat>",
-	aliases: ["pat, pet"],
+	aliases: ["pat", "pet"],
 	execute(message, args) {
 		if(!message.mentions.users.size) {
 			message.channel.send(embeds.errorEmbed(vukkytils.getString("PING_REQUIRED")));
