@@ -104,7 +104,7 @@
 	"STARTUP_LOGIN_FAILED": "Login failed.",
 	"STARTUP_LOGIN_FAILED_INTERNET_UNAVAILABLE": "Login failed - your internet connection may be unavailable.",
 	"DISCORD_INVITES_DISABLED_AUTOMOD": "%s, **sending discord invites** is disabled in this server",
-	"INNER_VUKKY_ERROR": "The piss is missing...",
+	"INNER_VUKKY_ERROR": "the piss is missing...",
 	"INNER_VUKKY_USER_FETCH_ERROR": "whos piss are you trying to find i cant tell is that even a real person?",
 	"WARNING_CANT_SEE_OTHER": "you need the `MANAGE_MESSAGES` permission to see other peoples mistakes"
 }
