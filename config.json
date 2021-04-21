@@ -16,7 +16,7 @@
     },
     "moderation": {
         "automod": {
-            "allowInviteLinks": false,
+            "allowInviteLinks": true,
             "allowInviteLinksBypassRoles": [
                 "770972367227846667",
                 "782810590979555339"
