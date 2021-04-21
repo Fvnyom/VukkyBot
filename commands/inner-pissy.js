@@ -5,11 +5,11 @@ const vukkytils = require("../utilities/vukkytils");
 const format = require("util").format;
 
 module.exports = {
-	name: "inner-vukky",
-	description: "Discover your inner Vukky!",
+	name: "inner-pissy",
+	description: "Discover your inner pissy!",
 	botPermissions: ["EMBED_LINKS"],
 	cooldown: 5,
-	aliases: ["innervukky"],
+	aliases: ["innerpissy"],
 	async execute(message, args) {
 		let mode;
 		try {
