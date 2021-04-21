@@ -42,7 +42,7 @@
 	"COVID_CRITICAL": "Critical",
 	"COVID_TESTS": "Tests",
 	"API_CREDIT": "this response is powered by the people at <%s>",
-	"DUCK_FINDING": "Hold on! I'm finding a duck for you...",
+	"DUCK_FINDING": "honc honc honc honc honc honc",
 	"ENV_PREFIX_RENAMED": "PREFIX is now BOT_PREFIX. Please change your .env file.",
 	"WARNING": "warning",
 	"SUCCESS": "success",

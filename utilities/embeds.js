@@ -246,6 +246,7 @@ function aboutEmbed(botversion, discordjsversion, osinfo) {
 		.addField(vukkytils.getString("ABOUT_VUKKYBOT_BOT_VER"), botversion, true)
 		.addField("h","i am not okay please help")
 		.addField("nyom", "*__drink me__*")
+		.addField("cool person who made the original vukkybot", "[vooky](https://github.com/Vukky123)")
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
 }
