@@ -247,6 +247,7 @@ function aboutEmbed(botversion, discordjsversion, osinfo) {
 		.addField("h","i am not okay please help")
 		.addField("nyom", "*__drink me__*")
 		.addField("cool person who made the original vukkybot", "[vooky](https://github.com/Vukky123)")
+		.addField("cool credits thing", "thank you vukky for being cool and making the original bot as well as letting me repurpose vukkies to make pissies \n thank you skelly for not blocking me for spamming your dms every time i fuck something up")
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
 }
