@@ -132,12 +132,12 @@ function GiveawayInvalid(prize, dropped_by) {
 }
 
 function quizStartEmbed(question, time, hint, author, categories) {
-	var description = `**Categories:** ${categories.join(", ")}\n\n${question}\nYou have ${time} seconds to answer!\n`;
+	var description = `**categories:** ${categories.join(", ")}\n\n${question}\nyou have ${time} seconds to answer\n`;
 	author = (!author) ? vukkytils.getString("QUIZ_UNKNOWN_USER") : author;
 	if(hint && config.commands.quiz.hints == true) {
 		description = description.concat(`\n💡 **${vukkytils.getString("QUIZ_HINT_AVAILABLE")}** ||${hint}||`);
 	}
-	description = description.concat(`\n📝 This question was brought to you by ${author} :)`);
+	description = description.concat(`\nthis question was brought to you by ${author}`);
 	return new Discord.MessageEmbed()
 		.setColor("#7289da")
 		.setTitle(`❓ ${vukkytils.getString("QUIZ_START")}`)
@@ -149,7 +149,7 @@ function quizStartEmbed(question, time, hint, author, categories) {
 function quizWinnerEmbed(winner) {
 	return new Discord.MessageEmbed()
 		.setColor("#ffc83d")
-		.setTitle(`👑 ${vukkytils.getString("QUIZ_WINNER_TITLE")}`)
+		.setTitle(`${vukkytils.getString("QUIZ_WINNER_TITLE")}`)
 		.setDescription(format(vukkytils.getString("QUIZ_WINNER_DESCRIPTION"), winner.author))
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
@@ -158,7 +158,7 @@ function quizWinnerEmbed(winner) {
 function quizLoseEmbed(message) {
 	return new Discord.MessageEmbed()
 		.setColor("#be1931")
-		.setTitle(`😅 ${vukkytils.getString("QUIZ_GAME_OVER")}`)
+		.setTitle(`${vukkytils.getString("QUIZ_GAME_OVER")}`)
 		.setDescription(message)
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
@@ -176,7 +176,7 @@ function cooldownEmbed(message) {
 function cryptoEmbed(coin, value, lastupdated, change24) {
 	return new Discord.MessageEmbed()
 		.setColor("#a7d28b")
-		.setTitle(`💰 ${coin} value`)
+		.setTitle(`${coin} value`)
 		.setDescription(vukkytils.getString("DATA_GOTTEN"))
 		.addField(vukkytils.getString("CRYPTO_VALUE"), `$${value}`, true)
 		.addField(vukkytils.getString("CRYPTO_VALUE_CHANGE"), `$${change24}`, true)  
@@ -211,11 +211,11 @@ function todayInHistoryEmbed(event, year, date, links) {
 function funFactEmbed(fact, category, image, source) {
 	return new Discord.MessageEmbed()
 		.setColor("#ffc83d")
-		.setTitle(`🧠 ${vukkytils.getString("DID_YOU_KNOW")} ${category}`)
+		.setTitle(`${vukkytils.getString("DID_YOU_KNOW")} ${category}`)
 		.setDescription(fact)
 		.setTimestamp()
 		.setImage(image)
-		.setAuthor(`Source: ${source}`)
+		.setAuthor(`source: ${source}`)
 		.setFooter(versionString, avatarURL);
 }
 
@@ -282,11 +282,11 @@ function warnsUserEmbed(username, warns) {
 function reportEmbed(messageURL, reportedUser, reporter, messageContent) {
 	return new Discord.MessageEmbed()
 		.setColor("#ffcc4d")
-		.setTitle("A message was reported!")
+		.setTitle("a message was reported")
 		.setDescription(messageContent)
-		.addField("Reported user", reportedUser, true)
-		.addField("Reporter", reporter, true)
-		.addField("Message link", messageURL, true)
+		.addField("reported user", reportedUser, true)
+		.addField("reporter", reporter, true)
+		.addField("message link", messageURL, true)
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
 }
@@ -296,7 +296,7 @@ function reportActionEmbed(title, messageContent, actionTakenBy) {
 		.setColor("#ffcc4d")
 		.setTitle(title)
 		.setDescription(messageContent)
-		.addField("Action taken by", actionTakenBy, true)
+		.addField("action taken by", actionTakenBy, true)
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
 }
@@ -304,8 +304,8 @@ function reportActionEmbed(title, messageContent, actionTakenBy) {
 function tweetBlacklistEmbed(blacklistReason) {
 	return new Discord.MessageEmbed()
 		.setColor("#ff0000")
-		.setTitle("⛔ You are not allowed to tweet.")
-		.setDescription(`You are blacklisted for ${blacklistReason}.`)
+		.setTitle("you arent allowed to tweet")
+		.setDescription(`youre blacklisted for ${blacklistReason}`)
 		.setTimestamp()
 		.setFooter(versionString, avatarURL);
 }
