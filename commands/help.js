@@ -14,18 +14,18 @@ module.exports = {
 		const { commands } = message.client;
 
 		if (!args.length) {
-			data.push("Here's a list of all my commands:");
+			data.push("here are my commands:");
 			data.push(commands.map(command => command.name).join(", "));
-			data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`);
+			data.push(`\nyou can send \`${prefix}help [command name]\` to get info on a specific command`);
 
 			return message.author.send(data, { split: true })
 				.then(() => {
 					if (message.channel.type === "dm") return;
-					message.channel.send(embeds.successEmbed("I've sent you a DM with all my commands!"));
+					message.channel.send(embeds.successEmbed("sent ya a dm with what i can do"));
 				})
 				.catch(error => {
 					console.error(`Could not send help DM to ${message.author.tag}.\n`, error);
-					message.channel.send(embeds.errorEmbed("Looks like I can't DM you. Do you have your DMs disabled?"));
+					message.channel.send(embeds.errorEmbed("i cant dm you pleas enable your dms ty"));
 				});
 		}
 
@@ -33,7 +33,7 @@ module.exports = {
 		const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
 		if (!command) {
-			return message.channel.send(embeds.errorEmbed(`I've been looking around for a while now, but I don't think **${name}** is a command.`));
+			return message.channel.send(embeds.errorEmbed(`okay dumbass but im pretty sure **${name}** isn't a command`));
 		}
 
 		const helpEmbed = new Discord.MessageEmbed()
