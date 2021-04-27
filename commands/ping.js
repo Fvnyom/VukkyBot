@@ -2,7 +2,7 @@ const { infoEmbed } = require("../utilities/embeds");
 
 module.exports = {
 	name: "ping",
-	description: "Ping!",
+	description: "ping",
 	botPermissions: ["EMBED_LINKS"],
 	async execute(message, args) {
 		const ping = await message.channel.send(`<@!${message.author.id}>`);

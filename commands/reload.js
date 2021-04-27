@@ -2,7 +2,7 @@ const embeds = require("../utilities/embeds");
 
 module.exports = {
 	name: "reload",
-	description: "Reloads a command",
+	description: "useless for normal people",
 	args: true,
 	usage: "<command>",
 	botPermissions: ["EMBED_LINKS"],

@@ -6,10 +6,10 @@ const format = require("util").format;
 
 module.exports = {
 	name: "inner-pissy",
-	description: "Discover your inner pissy!",
+	description: "discover your inner pissy!",
 	botPermissions: ["EMBED_LINKS"],
 	cooldown: 5,
-	aliases: ["innerpissy"],
+	aliases: ["innerpissy", "inpiss"],
 	async execute(message, args) {
 		let mode;
 		try {

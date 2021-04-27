@@ -9,7 +9,7 @@ module.exports = {
 	botPermissions: ["EMBED_LINKS", "ADD_REACTIONS"],
 	aliases: ["trivia"],
 	execute(message, args) {
-		console.log("Let's play a quiz!");
+		console.log("lets play a quiz");
 		const quiz = vukkytils.getStrings(`../strings/quiz/${vukkytils.language}`);
 		const config = require("../config.json");
 		const item = quiz[Math.floor(Math.random() * quiz.length)];
@@ -27,13 +27,13 @@ module.exports = {
 					wannaPlayAgain(message, args);
 				})
 				.catch(collected => {
-					message.channel.send(embeds.quizLoseEmbed(`Hm! That question might have been too hard.\nThe answers for it were ||${item.answers.join(", ")}||.`));
+					message.channel.send(embeds.quizLoseEmbed(`hah big dumb \nthe answers were ||${item.answers.join(", ")}||.`));
 					wannaPlayAgain(message, args);
 				});
 		});
 
 		function wannaPlayAgain(message, args) {
-			message.channel.send(embeds.inputEmbed("Wanna play again?")).then((confirmMessage) => {
+			message.channel.send(embeds.inputEmbed("wanna play again?")).then((confirmMessage) => {
 				confirmMessage.react("👍").then(() => confirmMessage.react("👎"));
 				const filter = (reaction, user) => {
 					return ["👍", "👎"].includes(reaction.emoji.name) && user.bot === false;
@@ -44,11 +44,11 @@ module.exports = {
 						if (reaction.emoji.name === "👍") {
 							message.client.commands.get("quiz").execute(message, args);
 						} else {
-							confirmMessage.channel.send(embeds.infoEmbed("Okay! There's always next time, I guess."));
+							confirmMessage.channel.send(embeds.infoEmbed("hah cringe"));
 						}
 					})
 					.catch(collected => {
-						confirmMessage.channel.send("Hm! I don't think anyone wants to play again...");
+						confirmMessage.channel.send("ill take that as a no");
 					});
 			});
 		}

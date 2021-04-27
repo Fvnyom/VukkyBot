@@ -23,7 +23,7 @@ function everythingIsFine(message, mentionedUser, args) {
 	let sql = `INSERT INTO warnings (username, serverid, uid, reason) VALUES ('DEPRECATED', ${message.guild.id} , ${mentionedUser.id}, '${warnReason}')`;
 	con.query(sql, function (err, result) {
 		if (err)  {
-			message.channel.send(errorEmbed("See logs for more information."));
+			message.channel.send(errorEmbed("see logs for more info"));
 			console.log(err);
 			con.end();
 		} else {
@@ -44,7 +44,7 @@ module.exports = {
 	mysql: true,
 	guildOnly: true,
 	execute(message, args) {
-		if (args.slice(1).join(" ").length < 1) return message.channel.send(errorEmbed(`I was expecting more arguments!\nUsage: \`${process.env.BOT_PREFIX}warn <@user> <reason>\``));
+		if (args.slice(1).join(" ").length < 1) return message.channel.send(errorEmbed(`i was expecting more arguments smh\nusage: \`${process.env.BOT_PREFIX}warn <@user> <reason>\``));
 		let mentionedUser;
 		if (message.guild.member(message.mentions.users.first())) {
 			mentionedUser = message.guild.member(message.mentions.users.first()).user;

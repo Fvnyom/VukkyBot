@@ -3,7 +3,7 @@ const vukkytils = require("../utilities/vukkytils");
 
 module.exports = {
 	name: "kick",
-	description: "Kick someone",
+	description: "kick someone (from the server)",
 	botPermissions: ["EMBED_LINKS", "KICK_MEMBERS"],
 	userPermissions: ["KICK_MEMBERS"],
 	guildOnly: true,
@@ -16,20 +16,20 @@ module.exports = {
 		if (!mentionedUser) return message.channel.send(vukkytils.getString("PING_REQUIRED"));
 		if(mentionedUser.id === message.author.id) return message.channel.send(vukkytils.getString("CANT_KICK_SELF"));
 		if(mentionedUser.id === message.client.user.id) return message.channel.send(vukkytils.getString("BOT_PAIN"));
-		if(mentionedUser.user.bot === true && !mentionHighestRole >= authorHighestRole) message.channel.send("Nooo! I don't want to kick my friends, but I guess I have to...");
+		if(mentionedUser.user.bot === true && !mentionHighestRole >= authorHighestRole) message.channel.send("haha im the better bot lmao");
 
 		var authorHighestRole = message.member.roles.highest.position;
 		var mentionHighestRole = mentionedUser.roles.highest.position;
-		if(mentionHighestRole >= authorHighestRole) return message.channel.send("You can't kick members with an equal or higher position than you.");
-		if(!mentionedUser.kickable) return message.channel.send("I can't kick this user.");
+		if(mentionHighestRole >= authorHighestRole) return message.channel.send("you cant kick members with an equal or higher position than you");
+		if(!mentionedUser.kickable) return message.channel.send("i cant kick this user");
 
-		mentionedUser.send(`👢 Hi! You got kicked from **${message.guild.name}**${(kickReason !== "no reason specified") ? ` for ${kickReason}.` : "."}`)
+		mentionedUser.send(`cringe you got kicked from **${message.guild.name}**${(kickReason !== "no reason specified") ? ` for ${kickReason}.` : "."}`)
 			.then(() => iHateThis())
 			.catch(() => iHateThis());
 		
 		function iHateThis() {
-			mentionedUser.kick(`Done by ${message.author.tag} - ${kickReason}`)
-				.then(message.channel.send(embeds.successEmbed(`Kicked <@${mentionedUser.id}> (${mentionedUser.id}) from **${message.guild.name}**${(kickReason !== "no reason specified") ? `, for ${kickReason}.` : "."}`)));
+			mentionedUser.kick(`done by ${message.author.tag} - ${kickReason}`)
+				.then(message.channel.send(embeds.successEmbed(`kicked <@${mentionedUser.id}> (${mentionedUser.id}) from **${message.guild.name}**${(kickReason !== "no reason specified") ? `, for ${kickReason}.` : "."}`)));
 		}
 	},
 };

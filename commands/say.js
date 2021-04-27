@@ -4,7 +4,7 @@ const config = require("../config.json");
 
 module.exports = {
 	name: "say",
-	description: "Fvn's way to force me to say things i dont want to say",
+	description: "Fvn's way to force me to say things i ~~dont~~ really want to say",
 	dcPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	execute(message, args) {
 		if(message.author.id != "125644326037487616") {

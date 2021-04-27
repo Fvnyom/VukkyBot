@@ -5,7 +5,7 @@ const config = require("../config.json");
 
 module.exports = {
 	name: "mcserv",
-	description: "Get details on a Minecraft Java server. This assumes the port is 25565.",
+	description: "get details on a minecraft java server this assumes the port is 25565",
 	botPermissions: ["EMBED_LINKS"],
 	args: true,
 	usage: "<server IP>",
@@ -23,11 +23,11 @@ module.exports = {
 							if(error.message) {
 								newMessage.edit(`${config.misc.emoji.error} ${error.message}`);
 							} else {
-								newMessage.edit(`${config.misc.emoji.error} Unknown error.`);
+								newMessage.edit(`${config.misc.emoji.error} unknown error.`);
 								console.log(error);
 							}
 						} else {
-							newMessage.edit(`${config.misc.emoji.error} Unknown error.`);
+							newMessage.edit(`${config.misc.emoji.error} unknown error.`);
 						}
 					});
 			});

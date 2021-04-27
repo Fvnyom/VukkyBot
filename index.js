@@ -97,7 +97,7 @@ client.once("ready", async () => {
 	const statuses = [
 		"with",
 		"with my brother shitbot",
-		"AMOGUS (REAL!?!?!?!?)",
+		"piss (REAL!?!?!?!?)",
 		"around",
 		"with Fvn's feelings",
 		"ur mom [laugh track]",
@@ -108,7 +108,9 @@ client.once("ready", async () => {
 		"https://nyom.ga/",
 		"omori (basil supremacy)",
 		"nyom",
-		"*slurp*"
+		"*slurp*",
+		"You have little time left.",
+		"uwu"
 	];
 	client.user.setActivity(`h (${pjson.version})`);
 	setInterval(() => {
@@ -157,7 +159,7 @@ const inviteSites = ["discord.gg/", "discord.com/invite/", "discordapp.com/invit
 client.on("message", async message => {
 	if (message.author.bot) return;
 	if ((message.channel.type == "text" && !message.guild.me.hasPermission("EMBED_LINKS"))) embedPermissions = 0;
-	if (message.content.toLowerCase().includes(`<@!${client.user.id}>`) && config.misc.prefixReminder == true && !message.content.startsWith(prefix)) message.channel.send(`Hi ${message.author}! Do you need help? Just type \`${process.env.BOT_PREFIX}help\`, and I'll send you all my commands!\nYou have to put \`${process.env.BOT_PREFIX}\` before the name of a command in order to make it work.`);
+	if (message.content.toLowerCase().includes(`<@!${client.user.id}>`) && config.misc.prefixReminder == true && !message.content.startsWith(prefix)) message.channel.send(`you haveth summoned me ${message.author}. do you require assistance? simply enter \`${process.env.BOT_PREFIX}help\`, and i shall aid you with what i can do.\nyou must put \`${process.env.BOT_PREFIX}\` before the name of a command in order to make it effective.`);
 	if (message.channel.name == config.counting.channelName) counting.check(message, client);
 
 	if (inviteSites.some(site => message.content.includes(site)) && config.moderation.automod.allowInviteLinks == false && !message.member.roles.cache.some(r => config.moderation.automod.allowInviteLinksBypassRoles.includes(r.id))) {
@@ -182,7 +184,7 @@ client.on("message", async message => {
 				message.channel.send(embed);
 			}
 		} else {
-			message.channel.send("There's something wrong with this auto response! Contact the server administrator.");
+			message.channel.send("theres something wrong with this auto response contact the server administrator");
 		}
 	}
 
@@ -199,7 +201,7 @@ client.on("message", async message => {
 	// Make sure the command exists
 	if (!command) {
 		if(config.misc.invalidCmdReminder) {
-			let reply = `I've been looking around for a while now, but I don't think **${commandName}** is a command.`;
+			let reply = `okay dumbass but im pretty sure **${commandName}** isn't a command`;
 			if (embedPermissions == 0) return message.channel.send(reply);
 			message.channel.send(embeds.errorEmbed(reply));
 		}
@@ -213,8 +215,8 @@ client.on("message", async message => {
 	}
 
 	if(command.disabled) {
-		if (embedPermissions == 0) return message.channel.send(`**${commandName}** is disabled.`);
-		return message.channel.send(embeds.errorEmbed(`**${commandName}** is disabled.`));
+		if (embedPermissions == 0) return message.channel.send(`**${commandName}** is disabled`);
+		return message.channel.send(embeds.errorEmbed(`**${commandName}** is disabled`));
 	}
 
 	if(command.botOwnerOnly && !config.misc.owner.includes(message.author.id)) {
@@ -223,14 +225,14 @@ client.on("message", async message => {
 	}
 
 	if (command.guildOnly && message.channel.type == "dm") {
-		return message.channel.send(embeds.errorEmbed(`**${commandName}** cannot be used inside DMs.`));
+		return message.channel.send(embeds.errorEmbed(`**${commandName}** cannot be used inside DMs`));
 	}
 
 	if (command.args && !args.length) {
-		let reply = `I expected you to give me some arguments for **${commandName}**, but I didn't see any.`;
+		let reply = `i expected you to give me some arguments for **${commandName}** but i didnt see any.`;
 
 		if (command.usage) {
-			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+			reply += `\nthe proper usage would be \`${prefix}${command.name} ${command.usage}\``;
 		}
 		if (embedPermissions == 0) return message.channel.send(reply);
 		return message.channel.send(embeds.errorEmbed(reply));
@@ -276,7 +278,7 @@ client.on("message", async message => {
 		if (now < expirationTime) {
 			const timeLeft = (expirationTime - now) / 1000;
 			console.log(timeLeft.toFixed(0));
-			return message.channel.send(embeds.cooldownEmbed(`You need to wait ${timeLeft.toFixed(1)} more second(s) before you can use the \`${command.name}\` command again.`));
+			return message.channel.send(embeds.cooldownEmbed(`you need to wait ${timeLeft.toFixed(1)} more second(s) before you can use the \`${command.name}\` command again`));
 		}
 	}
 
@@ -289,7 +291,7 @@ client.on("message", async message => {
 	} catch (error) {
 		console.log(`[${command.name}] ${error.message}`);
 		console.error(error);
-		message.reply("there was an error trying to execute that command!", embeds.errorEmbed(error.message));
+		message.reply("there was an error trying to execute that command.", embeds.errorEmbed(error.message));
 	}
 });
 
@@ -297,7 +299,7 @@ client.on("messageUpdate", async (oldMessage, newMessage) => {
 	if (newMessage && newMessage.partial) {
 		await newMessage.fetch()
 			.catch(error => {
-				console.log("Something went wrong when fetching the message: ", error);
+				console.log("something went wrong when fetching the message: ", error);
 			});
 	}
 	if (newMessage && newMessage.content && inviteSites.some(site => newMessage.content.includes(site)) && config.moderation.automod.allowInviteLinks == false && !newMessage.member.roles.cache.some(r => config.moderation.automod.allowInviteLinksBypassRoles.includes(r))) {
@@ -337,11 +339,11 @@ client.on("messageReactionAdd", async function(reaction, user){
 						reportMessage.reactions.removeAll();
 						if(actionReaction.emoji.name == "🗑") {
 							reaction.message.delete();
-							reportMessage.edit(embeds.reportActionEmbed("The reported message was deleted.", reaction.message.content, actionReaction.users.cache.last()));
+							reportMessage.edit(embeds.reportActionEmbed("the reported message was deleted.", reaction.message.content, actionReaction.users.cache.last()));
 						}
 					})
 					.catch(() => {
-						return reportMessage.channel.send("There was an error.");
+						return reportMessage.channel.send("there was an error.");
 					});
 			});
 	}
