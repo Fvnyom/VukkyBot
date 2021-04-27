@@ -8,7 +8,7 @@
 	"USER_PERMISSION_NEEDED": "haha dumb you need the `%s` permission to use that command nyom",
 	"BOT_PERMISSION_NEEDED": "give me the `%s` permission to use that command nyom",
 	"HUG_TYPES": ["a BIG hug.", "a BIGGER hug.", "a MASSIVE hug!"],
-	"HEADPAT_TYPES": ["an AMAZING headpat.", "a OUTSTANDING headpat.", "an happy headpat! :D"],
+	"HEADPAT_TYPES": ["an AMAZING headpat!", "an OUTSTANDING headpat!", "a happy headpat! :D"],
 	"SLAP_TYPES": "a big smacc in the face",
 	"GIVE_USER": "%s gives %s %s",
 	"WARNINGS_TITLE": "%s's warnings",
