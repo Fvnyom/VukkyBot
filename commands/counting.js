@@ -6,7 +6,7 @@ var mysql = require("mysql");
 var sql = "";
 module.exports = {
 	name: "counting",
-	description: "Make VukkyBot tell things about counting!",
+	description: "say the counting high score on the server",
 	cooldown: 0,
 	guildOnly: true,
 	mysql: true,

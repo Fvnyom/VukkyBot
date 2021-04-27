@@ -11,12 +11,13 @@ const format = require("util").format;
 
 module.exports = {
 	name: "tweetreply",
-	description: "Make VukkyBot reply to things on Twitter!",
+	description: "make piss tweet back",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	cooldown: 120,
 	aliases: ["replytweet", "twtr", "tweetr", "twr"],
 	usage: "<tweet ID> <content>",
 	guildOnly: true,
+	disabled: true,
 	execute(message, args) {
 		let attachments = [];
 		if(message.attachments.first()) attachments = message.attachments.map(attachment => attachment.url);

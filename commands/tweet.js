@@ -10,11 +10,12 @@ const format = require("util").format;
 
 module.exports = {
 	name: "tweet",
-	description: "Make VukkyBot say things on Twitter!",
+	description: "make piss tweet",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	cooldown: 120,
 	usage: "<content>",
 	guildOnly: true,
+	disabled: true,
 	aliases: ["twt", "tw"],
 	execute(message, args) {
 		let attachments = [];

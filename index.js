@@ -225,7 +225,7 @@ client.on("message", async message => {
 	}
 
 	if (command.guildOnly && message.channel.type == "dm") {
-		return message.channel.send(embeds.errorEmbed(`**${commandName}** cannot be used inside DMs`));
+		return message.channel.send(embeds.errorEmbed(`**${commandName}** cannot be used inside dms`));
 	}
 
 	if (command.args && !args.length) {
