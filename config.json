@@ -10,8 +10,8 @@
         "mysql": true,
         "language": "en",
         "emoji": {
-            "error": "",
-            "loading": ""
+            "error": "<:gunbun:826130320909926440>",
+            "loading": "<a:thecat:824359973399953450>"
         }
     },
     "moderation": {
