@@ -10,7 +10,7 @@ module.exports = {
 	name: "warns",
 	description: "look at previous mistakes.",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
-	mysql: true,
+	requiredAPIs: ["mysql"],
 	guildOnly: true,
 	usage: "<@user | user id> (if not specified, shows self)",
 	aliases: ["warnings"],

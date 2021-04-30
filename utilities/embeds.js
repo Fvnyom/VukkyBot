@@ -238,7 +238,7 @@ function innerEmbed(image) {
 		.setFooter(versionString, avatarURL);
 }
 
-function aboutEmbed(botversion, discordjsversion, osinfo) {
+function aboutEmbed(botversion, discordjsversion, osinfo, owners) {
 	return new Discord.MessageEmbed()
 		.setColor("#4289c1")
 		.setTitle(`${vukkytils.getString("ABOUT_VUKKYBOT_TITLE")}`)

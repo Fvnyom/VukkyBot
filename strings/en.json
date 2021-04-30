@@ -84,6 +84,7 @@
 	"ABOUT_VUKKYBOT_BOT_VER": "piss version",
 	"ABOUT_VUKKYBOT_DJS_VER": "pisscord.js version",
 	"ABOUT_VUKKYBOT_OS_INFO": "i dont even fucking know",
+	"ABOUT_VUKKYBOT_BOT_OWNERS": "bot owner",
 	"DATA_GOTTEN": "heres your requested data",
 	"CRYPTO_VALUE": "value in dolar",
 	"CRYPTO_VALUE_CHANGE": "value change (from 24h ago)",
@@ -103,8 +104,13 @@
 	"STARTUP_LOGGED_IN": "Logged in as %s!",
 	"STARTUP_LOGIN_FAILED": "Login failed.",
 	"STARTUP_LOGIN_FAILED_INTERNET_UNAVAILABLE": "Login failed - your internet connection may be unavailable.",
-	"DISCORD_INVITES_DISABLED_AUTOMOD": "%s, **sending discord invites** is disabled in this server",
-	"INNER_VUKKY_ERROR": "the piss is missing...",
+	"DISCORD_INVITES_DISABLED_AUTOMOD": "%s, **sending Discord invites** is disabled in this server",
+	"INNER_VUKKY_ERROR": "the piss is missing",
 	"INNER_VUKKY_USER_FETCH_ERROR": "whos piss are you trying to find i cant tell is that even a real person?",
-	"WARNING_CANT_SEE_OTHER": "you need the `MANAGE_MESSAGES` permission to see other peoples mistakes"
+	"WARNING_CANT_SEE_OTHER": "you need the `MANAGE_MESSAGES` permission to see other peoples mistakes",
+	"HELP_NO_DESCRIPTION": "it looks like this command doesn't have any description so enjoy this message",
+	"MYSQL_MISSING_CREDENTIALS": "some MySQL credentials are missing",
+	"COMMAND_GUILD_ONLY": "%s cant be used in DMs",
+	"COMMAND_BOT_OWNER_ONLY": "%s can only be used by the bot owner.",
+	"COMMAND_INVALID": "Aight dumbass but I'm pretty sure **${commandName}** isn't a command. Did you spell that right?"
 }

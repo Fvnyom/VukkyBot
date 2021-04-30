@@ -9,7 +9,7 @@ module.exports = {
 	description: "say the counting high score on the server",
 	cooldown: 0,
 	guildOnly: true,
-	mysql: true,
+	requiredAPIs: ["mysql"],
 	usage: "<highscore or current>",
 	execute(message, args) {
 		var con = mysql.createConnection({

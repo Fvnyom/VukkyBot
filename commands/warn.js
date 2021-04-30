@@ -41,7 +41,7 @@ module.exports = {
 	userPermissions: ["MANAGE_MESSAGES"],
 	usage: "<@user> <reason>",
 	cooldown: 0,
-	mysql: true,
+	requiredAPIs: ["mysql"],
 	guildOnly: true,
 	execute(message, args) {
 		if (args.slice(1).join(" ").length < 1) return message.channel.send(errorEmbed(`i was expecting more arguments smh\nusage: \`${process.env.BOT_PREFIX}warn <@user> <reason>\``));
