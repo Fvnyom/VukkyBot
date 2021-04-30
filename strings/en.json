@@ -112,5 +112,5 @@
 	"MYSQL_MISSING_CREDENTIALS": "some MySQL credentials are missing",
 	"COMMAND_GUILD_ONLY": "%s cant be used in DMs",
 	"COMMAND_BOT_OWNER_ONLY": "%s can only be used by the bot owner.",
-	"COMMAND_INVALID": "Aight dumbass but I'm pretty sure **${commandName}** isn't a command. Did you spell that right?"
+	"COMMAND_INVALID": "Aight dumbass but I'm pretty sure that isn't a command. Did you spell that right? The command you tried to use is"
 }
