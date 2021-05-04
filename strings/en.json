@@ -20,6 +20,7 @@
 	"CANT_HEADPAT_SELF": "no",
 	"CANT_KICK_SELF": "no lol why",
 	"CANT_BAN_SELF": "no lol why",
+	"CANT_MUTE_SELF":"you cant shut me up, sorry <3",
 	"PING_REQUIRED": "who the hell are ya trying to do that to?",
 	"TWEET_APPROVED": "your tweet was approved by a user here it is %s",
 	"TWEET_DENIED": "your tweet was denied by a user",

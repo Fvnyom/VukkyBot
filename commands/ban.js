@@ -8,7 +8,7 @@ module.exports = {
 	userPermissions: ["BAN_MEMBERS"],
 	guildOnly: true,
 	args: true,
-	usage: "<@user>",
+	usage: "<@user> [reason]",
 	cooldown: 0,
 	execute(message, args) {
 		var mentionedUser = message.guild.member(message.mentions.users.first());
@@ -21,7 +21,7 @@ module.exports = {
 		var authorHighestRole = message.member.roles.highest.position;
 		var mentionHighestRole = mentionedUser.roles.highest.position;
 		if(mentionHighestRole >= authorHighestRole) return message.channel.send("you cant ban members with an equal or higher position than you");
-		if(!mentionedUser.bannable) return message.channel.send("i cant ban this person please help");
+		if(!mentionedUser.bannable) return message.channel.send("i cant ban this person");
 
 		mentionedUser.send(`you got banned (smh) from **${message.guild.name}**${(banReason !== "no reason specified") ? ` for ${banReason}.` : "."}`)
 			.then(() => iHateThis())

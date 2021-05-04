@@ -10,6 +10,7 @@ module.exports = {
 	botPermissions: ["EMBED_LINKS"],
 	cooldown: 5,
 	aliases: ["innerpissy", "inpiss"],
+	disabled: true,
 	async execute(message, args) {
 		let mode;
 		try {

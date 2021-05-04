@@ -39,7 +39,7 @@ module.exports = {
 	description: "oh no person do bad thing time to hurt their feelings",
 	botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	userPermissions: ["MANAGE_MESSAGES"],
-	usage: "<@user> <reason>",
+	usage: "<@user> [reason]",
 	cooldown: 0,
 	requiredAPIs: ["mysql"],
 	guildOnly: true,

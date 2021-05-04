@@ -8,7 +8,7 @@ module.exports = {
 	userPermissions: ["KICK_MEMBERS"],
 	guildOnly: true,
 	args: true,
-	usage: "<@user>",
+	usage: "<@user> [reason]",
 	cooldown: 0,
 	execute(message, args) {
 		var mentionedUser = message.guild.member(message.mentions.users.first());

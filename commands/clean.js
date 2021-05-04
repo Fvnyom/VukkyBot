@@ -11,7 +11,7 @@ module.exports = {
 	userPermissions: ["MANAGE_MESSAGES"],
 	args: true,
 	guildOnly: true,
-	usage: "<messages to clear>",
+	usage: "<amount of messages to clear>",
 	aliases: ["clear", "wipe", "clean"],
 	execute(message, args) {
 		if(parseInt(args[0]) < 1 || isNaN(parseInt(args[0]))) return message.channel.send(embeds.errorEmbed("its either thats not a number or it **is** but it's less than 1."));
