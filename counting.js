@@ -98,8 +98,7 @@ module.exports = {
 		});
 	},
 	deletion(message) {
-		if (shouldRun(true) != true || !isInt(message.content) || servers[message.guild.server.id].number != parseInt(message.content)) return;
-		message.channel.send(`The current number was deleted! The contents of the message were:\n${message.content}`);
+		if (shouldRun(true) != true || !isInt(message.content) || servers[message.guild.server.id].number != parseInt(message.content)) return message.channel.send(`The current number was deleted! The contents of the message were:\n${message.content}`);
 	},
 	check(message, client) {
 		if(shouldRun(false) != true) return;
