@@ -4,8 +4,8 @@ const config = require("../config.json");
 
 module.exports = {
 	name: "trash",
-	description: "where i belong",
-	botPermissions: ["ATTACH_FILES"],
+	description: "me",
+	botPermissions: ["ATTACH_FILES", "MANAGE_MESSAGES"],
 	usage: "[user]",
 	async execute(message, args) {
 		await message.react(config.misc.emoji.loading);
