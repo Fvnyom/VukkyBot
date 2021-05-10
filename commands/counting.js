@@ -6,7 +6,7 @@ var mysql = require("mysql");
 var sql = "";
 module.exports = {
 	name: "counting",
-	description: "say the counting high score on the server",
+	description: "say the counting high score on the server or the current number",
 	cooldown: 0,
 	guildOnly: true,
 	requiredAPIs: ["mysql"],
