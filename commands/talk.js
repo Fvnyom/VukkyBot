@@ -7,7 +7,7 @@ module.exports = {
 	description: "talk to a puddle of piss",
 	cooldown: 1,
 	execute(message, args) {
-		var responses = ["*i wait on the floor, menacingly.*", "slurp", "drink me.", "Fvn is too lazy to make more than **4** responces"];
+		var responses = ["*i wait on the floor, menacingly.*", "slurp", "drink me.", "Fvn is too lazy to make more than **4** responces also Fvn isnt cute lmao"];
 		message.channel.send(responses[Math.floor(Math.random() * responses.length)]);
 	},
 };
