@@ -6,7 +6,7 @@ const { errorEmbed, successEmbed } = require("../embeds.js");
 
 module.exports = {
 	name: "warns",
-	description: "Make VukkyBot remove warnings from people!",
+	description: "Make SGRDINKDFGUJHNDF remove warnings from people!",
 	dcPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
 	args: true,
 	mysql: true,

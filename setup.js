@@ -4,7 +4,7 @@ let chalk = require("chalk");
 const ora = require("ora");
 
 let mysql = require("mysql");
-console.log(chalk.blueBright("Welcome to the interactive VukkyBot Setup tool."));
+console.log(chalk.blueBright("Welcome to the interactive SGRDINKDFGUJHNDF Setup tool."));
 
 let sql;
 
@@ -27,18 +27,18 @@ let questions = [
 	{
 		type: "confirm",
 		name: "launch",
-		message: "Start VukkyBot after setup is complete?"
+		message: "Start SGRDINKDFGUJHNDF after setup is complete?"
 	},
 	{
 		type: "input",
 		name: "prefix",
-		message: "What's the prefix for your VukkyBot going to be?",
+		message: "What's the prefix for your SGRDINKDFGUJHNDF going to be?",
 		default: "v!",
 	},
 	{
 		type: "confirm",
 		name: "prefixreminder",
-		message: "Do you want your VukkyBot to remind you of its prefix when pinged?",
+		message: "Do you want your SGRDINKDFGUJHNDF to remind you of its prefix when pinged?",
 	},
 	{
 		type: "input",
@@ -59,7 +59,7 @@ let questions = [
 	{
 		type: "confirm",
 		name: "countingenabled",
-		message: "Would you like VukkyBot to count for you?",
+		message: "Would you like SGRDINKDFGUJHNDF to count for you?",
 		when: function (answers) {
 			return answers.mysql !== false;
 		},
@@ -67,7 +67,7 @@ let questions = [
 	{
 		type: "input",
 		name: "countingchannel",
-		message: "What is the name of the channel you would like VukkyBot to count in?",
+		message: "What is the name of the channel you would like SGRDINKDFGUJHNDF to count in?",
 		default: "counting",
 		when: function (answers) {
 			return answers.countingenabled !== false && answers.mysql !== false;
@@ -189,15 +189,15 @@ inquirer.prompt(questions).then((answers) => {
 	function launchyBotty() {
 		console.log(chalk.green.bold("Congratulations! Setup has now completed."));
 		if (answers.launch) {
-			const spinner3 = ora("Starting VukkyBot").start();
+			const spinner3 = ora("Starting SGRDINKDFGUJHNDF").start();
 			try {
 				const npm = require("npm");
 				npm.load(() => {
 					npm.run("start");
 				});
-				spinner3.succeed("VukkyBot should start now");
+				spinner3.succeed("SGRDINKDFGUJHNDF should start now");
 			} catch (err) {
-				spinner3.fail("Couldn't start VukkyBot");
+				spinner3.fail("Couldn't start SGRDINKDFGUJHNDF");
 				console.log(err);
 			}
 		} else {

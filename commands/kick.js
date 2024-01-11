@@ -18,7 +18,7 @@ module.exports = {
 
 		var authorHighestRole = message.member.roles.highest.position;
 		var mentionHighestRole = mentionedUser.roles.highest.position;
-		if(mentionHighestRole >= authorHighestRole) return message.channel.send("You can't kick members with an equal or higher position than you.");
+		//if(mentionHighestRole >= authorHighestRole) return message.channel.send("You can't kick members with an equal or higher position than you.");
 		if(!mentionedUser.kickable) return message.channel.send("I can't kick this user.");
 
 		mentionedUser.kick(`Done by ${message.author.tag} - ${kickReason}`)

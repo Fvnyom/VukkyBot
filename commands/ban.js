@@ -19,7 +19,7 @@ module.exports = {
 
 		var authorHighestRole = message.member.roles.highest.position;
 		var mentionHighestRole = mentionedUser.roles.highest.position;
-		if(mentionHighestRole >= authorHighestRole) return message.channel.send("You can't ban members with an equal or higher position than you.");
+		//if(mentionHighestRole >= authorHighestRole) return message.channel.send("You can't ban members with an equal or higher position than you.");
 		if(!mentionedUser.bannable) return message.channel.send("I can't ban this user.");
 
 		mentionedUser.ban({reason: `Done by ${message.author.tag} - ${banReason}`})

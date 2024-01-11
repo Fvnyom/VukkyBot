@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema",
     "title": "Configuration",
-    "description": "The configuration for VukkyBot",
+    "description": "The configuration for SGRDINKDFGUJHNDF",
     "type": "object",
     "properties": {
         "misc": {
@@ -13,7 +13,7 @@
                     "type": "boolean"
                 },
                 "owner": {
-                    "description": "The Discord ID of the owner of this VukkyBot",
+                    "description": "The Discord ID of the owner of this SGRDINKDFGUJHNDF",
                     "type": "string"
                 },
                 "mysql": {
@@ -23,7 +23,7 @@
             }
         },
         "counting": {
-            "description": "Options for VukkyBot's counting feature",
+            "description": "Options for SGRDINKDFGUJHNDF's counting feature",
             "type": "object",
             "properties": {
                 "enabled": {
@@ -33,7 +33,7 @@
             }
         },
         "commands": {
-            "description": "Options for VukkyBot's commands",
+            "description": "Options for SGRDINKDFGUJHNDF's commands",
             "type": "object",
             "properties": {
                 "quiz": {

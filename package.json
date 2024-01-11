@@ -1,7 +1,7 @@
 {
-  "name": "vukkybot",
+  "name": "SGRDINKDFGUJHNDF",
   "version": "1.14.0",
-  "description": "VukkyBot",
+  "description": "SGRDINKDFGUJHNDF",
   "main": "index.js",
   "dependencies": {
     "chalk": "^4.1.0",
@@ -19,21 +19,21 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start index.js --name VukkyBot -- --color && pm2 log",
-    "stop": "pm2 del VukkyBot",
-    "restart": "pm2 restart VukkyBot && pm2 log",
+    "start": "pm2 start index.js --name SGRDINKDFGUJHNDF -- --color && pm2 log",
+    "stop": "pm2 del SGRDINKDFGUJHNDF",
+    "restart": "pm2 restart SGRDINKDFGUJHNDF && pm2 log",
     "setup": "node setup.js",
     "lint": "npx eslint **/*.js",
     "lintfix": "npx eslint **/*.js --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VukkyLtd/VukkyBot.git"
+    "url": "git+https://github.com/VukkyLtd/SGRDINKDFGUJHNDF.git"
   },
   "author": "Vukky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VukkyLtd/VukkyBot/issues"
+    "url": "https://github.com/VukkyLtd/SGRDINKDFGUJHNDF/issues"
   },
-  "homepage": "https://github.com/VukkyLtd/VukkyBot#readme"
+  "homepage": "https://github.com/VukkyLtd/SGRDINKDFGUJHNDF#readme"
 }

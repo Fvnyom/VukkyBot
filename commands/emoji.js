@@ -3,7 +3,7 @@ const embeds = require("../embeds.js");
 
 module.exports = {
 	name: "emoji",
-	description: "Add and remove emojis with the help of VukkyBot!",
+	description: "Add and remove emojis with the help of SGRDINKDFGUJHNDF!",
 	dcPermissions: ["MANAGE_EMOJIS"],
 	args: true,
 	guildOnly: true,

@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for VukkyBot so that we can have new things
+about: Suggest an idea for SGRDINKDFGUJHNDF so that we can have new things
 title: "[FEATURE REQUEST]"
 labels: enhancement
 assignees: Vukky123

@@ -1,4 +1,4 @@
-If you came here, you probably want to customize your VukkyBot.
+If you came here, you probably want to customize your SGRDINKDFGUJHNDF.
 
 Well, here we go!
 
@@ -12,7 +12,7 @@ Toggles if the bot reminds you about its prefix when pinged. (default: `true`)
 
 ## owner
 
-The ID of the VukkyBot hoster.
+The ID of the SGRDINKDFGUJHNDF hoster.
 
 # commands
 

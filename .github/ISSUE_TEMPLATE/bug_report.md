@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help VukkyBot improve
+about: Create a report to help SGRDINKDFGUJHNDF improve
 title: "[BUG]"
 labels: bug
 assignees: Vukky123
@@ -24,7 +24,7 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Some details to help me**
- - VukkyBot version: [e.g. 1.0.2]
+ - SGRDINKDFGUJHNDF version: [e.g. 1.0.2]
 
 **Additional context**
 Add any other context about the problem here.

@@ -14,7 +14,7 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
 let embedPermissions = 1;
 
-console.log("[startup] VukkyBot is starting...");
+console.log("[startup] SGRDINKDFGUJHNDF is starting...");
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
@@ -60,6 +60,10 @@ client.on("message", message => {
 
 	if (!message.content.toLowerCase().startsWith(prefix)) return;
 
+	if(message.author.id != config.misc.owner) {
+		message.channel.send(embeds.errorEmbed("Sorry, but you're not the owner of this SGRDINKDFGUJHNDF."));
+	} else {
+
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
 
@@ -74,8 +78,8 @@ client.on("message", message => {
 	}
 
 	if(command.mysql && !config.misc.mysql) {
-		if (embedPermissions == 0) return message.channel.send(`**${commandName}** is not enabled on this VukkyBot because MySQL is disabled!\nFor the hoster: See https://vukkyltd.github.io/VukkyBot/troubleshooting/mysqldisabled.html for instructions on how to enable it!`);
-		return message.channel.send(embeds.errorEmbed(`**${commandName}** is not enabled on this VukkyBot because MySQL is disabled!\nFor the hoster: See [here](https://vukkyltd.github.io/VukkyBot/troubleshooting/mysqldisabled.html) for instructions on how to enable it!`));
+		if (embedPermissions == 0) return message.channel.send(`**${commandName}** is not enabled on this SGRDINKDFGUJHNDF because MySQL is disabled!\nFor the hoster: See https://vukkyltd.github.io/SGRDINKDFGUJHNDF/troubleshooting/mysqldisabled.html for instructions on how to enable it!`);
+		return message.channel.send(embeds.errorEmbed(`**${commandName}** is not enabled on this SGRDINKDFGUJHNDF because MySQL is disabled!\nFor the hoster: See [here](https://vukkyltd.github.io/SGRDINKDFGUJHNDF/troubleshooting/mysqldisabled.html) for instructions on how to enable it!`));
 	}
 
 	if (command.guildOnly && message.channel.type !== "text") {
@@ -138,6 +142,7 @@ client.on("message", message => {
 		console.log(`[${command.name}] ${error.message}`);
 		message.reply("there was an error trying to execute that command!", embeds.errorEmbed(error.message));
 	}
+}
 });
 
 client.login(process.env.BOT_TOKEN);

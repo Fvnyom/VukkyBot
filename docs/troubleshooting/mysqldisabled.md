@@ -1,4 +1,4 @@
-# How to fix the "X is not enabled on this VukkyBot because MySQL is disabled!" error
+# How to fix the "X is not enabled on this SGRDINKDFGUJHNDF because MySQL is disabled!" error
 
 This error appears because you did not want a MySQL database during setup.
 
@@ -10,7 +10,7 @@ Google it for more information.
 
 ## Step Two: Type your information into setup.js
 
-You can access setup.js by typing the following command in your VukkyBot folder:
+You can access setup.js by typing the following command in your SGRDINKDFGUJHNDF folder:
 
 ```
 npm run setup

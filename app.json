@@ -1,19 +1,19 @@
 {
-  "name": "VukkyBot",
+  "name": "SGRDINKDFGUJHNDF",
   "description": "The bot from the Vukky's Chat Place Discord!",
   "keywords": [
     "discord",
     "giveaways",
     "vukky"
   ],
-  "website": "https://vukky123.github.io/vukkybot",
-  "repository": "https://github.com/Vukky123/VukkyBot",
+  "website": "https://vukky123.github.io/SGRDINKDFGUJHNDF",
+  "repository": "https://github.com/Vukky123/SGRDINKDFGUJHNDF",
   "env": {
     "BOT_TOKEN": {
-      "description": "The token for your VukkyBot. Not your client secret!"
+      "description": "The token for your SGRDINKDFGUJHNDF. Not your client secret!"
     },
     "PREFIX": {
-      "description": "The prefix your VukkyBot will use.",
+      "description": "The prefix your SGRDINKDFGUJHNDF will use.",
       "value": "v!"
     }
   },

@@ -1,13 +1,13 @@
 {
-    "docs": "https://vukkyltd.github.io/VukkyBot/config.html",
+    "docs": "https://vukkyltd.github.io/SGRDINKDFGUJHNDF/config.html",
     "$schema": "./config.schema.json",
     "misc": {
         "prefixReminder": true,
-        "owner": "708333380525228082",
-        "mysql": true
+        "owner": "468242178880176129",
+        "mysql": false
     },
     "counting": {
-        "enabled": true,
+        "enabled": false,
         "channelName": "counting"
     },
     "commands": {

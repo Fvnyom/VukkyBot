@@ -4,7 +4,7 @@ var os = require("os");
 
 module.exports = {
 	name: "about",
-	description: "Get information about this VukkyBot!",
+	description: "Get information about this SGRDINKDFGUJHNDF!",
 	dcPermissions: ["EMBED_LINKS"],
 	aliases: ["info"],
 	execute(message, args) {
