@@ -10,7 +10,7 @@ module.exports = {
 		if(message.author.id != config.misc.owner) {
 			message.channel.send(embeds.errorEmbed("Sorry, but you're not the owner of this SGRDINKDFGUJHNDF."));
 		} else {
-			message.channel.send(infoEmbed("Pong. test lmao hsfdjkghdflk"));
+			message.channel.send(infoEmbed("Pong. test lmao GFJKNGDFJHKG"));
 		}
 	},
 };

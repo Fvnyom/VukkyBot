@@ -55,7 +55,7 @@ client.on("message", message => {
 	if (!message.content.toLowerCase().startsWith(prefix)) return;
 
 	if(message.author.id != config.misc.owner) {
-		message.channel.send(embeds.errorEmbed("Sorry, but you're not the owner of this SGRDINKDFGUJHNDF."));
+		message.channel.send(embeds.errorEmbed("lol, lmao, loser xD !!! + ratio + L + i want to die x3 hehe uwu!."));
 	} else {
 
 	const args = message.content.slice(prefix.length).split(/ +/);
