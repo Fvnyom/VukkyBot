@@ -30,15 +30,9 @@ const cooldowns = new Discord.Collection();
 client.once("ready", () => {
 	console.log(`[startup] ${success("Ready!")}`);
 	const statuses = [
-		"with JavaScript",
-		"with a Fall Guy",
-		"with counting bots",
-		"with banning people",
-		"with the console",
-		"with pm2",
-		"with npm",
-		"with ESLint",
-		"with MySQL"
+		"FUCKKKKK",
+		"AAAAAAAAAAAAA",
+		"PISS OFFFF"
 	];
 	setInterval(() => {
 		const index = Math.floor(Math.random() * (statuses.length - 1) + 1);
